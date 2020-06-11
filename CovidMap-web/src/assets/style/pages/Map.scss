@@ -1,0 +1,153 @@
+
+.Map-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.Map-cases {   
+    overflow: scroll; 
+    padding: 10px 15px;
+}
+.Map-cases h3 {
+    font-size: 1.5em;
+}
+.Map-cases p {
+    font-size: 1.2em;
+    font-family: 'Noto Serif', serif;
+}
+.Map-select {
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-bottom: 3px solid #E65C2C;
+}
+.Map-select:focus {
+    outline: none;
+}
+
+.Map-department-total-container {
+    margin-top: 10px;
+    border: 1px solid #CCC;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.Map-bottom-line {
+    margin: 20px 20px;
+    height: 2px;
+    background-color: #236793;
+}
+
+.Map-city-total-container {
+    @extend .Map-department-total-container;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.Map-col-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.Map-total-count {
+    font-size: 1em;
+    font-weight: bold;
+}
+.Map-total-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0.5em;
+    color: #626262;
+    text-transform: uppercase;
+}
+.Map-total-city {
+    font-weight: bold;
+    text-align: center;
+}
+.mapbox-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mapBox {
+    width: 100%;
+    height: 100%;
+
+}
+.map-nav {
+    position: absolute;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    top: 20px;
+    left: 20px;
+}
+.map-nav a {
+    padding: 1em;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    &:hover {
+        color: #E65C2C;
+    }
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+.map-nav-bottom {
+    display: none;
+}   
+
+#marker {
+    background-color:rgba($color: #E65C2C, $alpha: .5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px)  {
+    .Map-container {
+        width: 100vw;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .Map-cases {
+        overflow: initial;
+        max-width: 95%;
+        margin: 0 auto;
+
+    }
+    .map-nav {
+      display: none;
+    }
+    .map-nav-bottom {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0;
+        background-color: white;
+        border-top: 1px solid #626262;
+        font-weight: bold;
+        z-index: 2;
+    }
+    .map-nav-bottom a {
+        width: 33%;
+        padding: 2em;
+        text-align: center;
+        color: #000000;
+        &:hover {
+            color: #E65C2C;
+        }
+    } 
+}

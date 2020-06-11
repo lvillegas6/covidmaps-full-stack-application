@@ -1,0 +1,79 @@
+$main-color: #E65C2C;
+$secondary-color: #236793;
+$text-color: #ffffff;
+$title-font:'Oswald', sans-serif;
+
+.Footer-stroke {
+    background-image: url(../../static/stroke.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    margin-bottom: -1px;
+}
+.Footer-content {
+    background-color: $secondary-color;
+}
+.Footer-help {
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}
+.Footer-help img {
+    width: 600px;
+}
+.Footer-information{
+    color: $text-color;
+    h3{
+        font-family: $title-font;
+        font-size: 2.5em;
+        margin: 10px 0;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    p span {
+        font-weight: 700;
+        display: block;
+        padding: 20px 0;
+    }
+}
+
+.Footer-strokeBottom {
+    background-image: url(../../static/strokeBottom.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+}
+@media only screen and (min-width: 1000px) {
+    .Footer-help {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            text-align: center;
+            max-width: 40%;
+            margin: 0 auto;
+
+        }
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px){
+    .Footer-stroke {
+        height: 300px;
+    }
+    .Footer-help img {
+        width: 900px;
+    }
+    .Footer-information {
+        h3{
+            font-size: 4em;
+        }
+        p {
+            font-size: 2.5em;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+$main-color: #E65C2C;
+
+.About-information{
+    text-align: center;
+    font-family: 'Noto Serif', serif;   
+    b {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 1.5em;
+        &:last-child  {
+            margin: 0;
+        }
+    }
+    b a {
+        color: $main-color;
+    }
+}
+@media only screen and (min-width: 768px)  {
+    .About {
+        max-width: 80%;
+        margin: 0 auto 80px auto;
+    }
+    .About-information{
+        text-align: justify;
+        b{
+            text-align: start;
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px){
+    .About-information b {
+        font-size: 2em;
+    }
+}

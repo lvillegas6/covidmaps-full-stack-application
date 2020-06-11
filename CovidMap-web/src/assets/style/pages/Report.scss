@@ -1,0 +1,75 @@
+$main-color: #E65C2C;
+.Report {
+    max-width: 95%;
+}
+
+.field{
+    text-align: start;
+    padding: 20px;
+}
+.field label {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+.field input, .field select{
+    background-color:transparent;
+    border: 1px #e1e1e1 solid;
+    text-align: start;
+    padding: 15px 10px;
+    width: 100%;
+    display: block;
+    outline: none;
+}
+
+.field select option {
+    font-size: 1.2em;
+}
+.field-button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button  {
+        width: 50%;
+    }
+
+}
+
+.Error-input {
+    border: 1px red solid!important;
+}
+.Error-text {
+    color: red;
+    font-size: .8em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1366px){
+    .Report {
+        max-width: 70%;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    .Report {
+        max-width: 60%;
+    }
+    .field label {
+        font-size: 1.5em;
+    }
+    .field input, .field select{
+        border: 3px #e1e1e1 solid;
+        font-size: 1.5em;
+    }
+    .field select option {
+        font-size: 1.5em;
+    }
+    .Error-input {
+        border: 3px red solid!important;
+    }
+    .Error-text {
+        color: red;
+        font-size: 1.2em;
+    }
+}
