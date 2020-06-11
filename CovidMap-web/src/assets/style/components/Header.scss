@@ -1,0 +1,88 @@
+$main-color: #E65C2C;
+$text-color: #ffffff;
+
+.Header {
+    width: 100%;
+    height: 95vh;
+}
+.Header-hero {
+    height: 100%;
+    background-image: url('../../static/hero.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+}
+.Header-logo {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+    color: $text-color;
+    span {
+        color: $main-color;
+    }
+}
+.Header-nav-container {
+    text-align: center;
+}
+.Header-navBar a{
+    font-size: 1.2em;
+    color: $text-color;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transition: all .5s ease; 
+    font-weight: 800;
+    display: block;
+
+    &:hover {
+        color: $main-color;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.Header-content{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        color: $text-color;
+        font-size: 1.8em;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .Header-nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Header-navBar a {
+        display: inline;
+        margin-right: 20px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
+    .Header-logo {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px){
+    .Header-logo {
+        font-size: 5.5em;
+    }
+    .Header-navBar a{
+        font-size: 1.8em;
+    }
+    .Header-content p {
+        font-size: 2.8em;
+    }
+}

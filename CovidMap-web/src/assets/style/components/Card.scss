@@ -1,0 +1,50 @@
+.RequestStatus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.RequestStatus-content {
+    width: 85%;
+}
+
+.RequestStatus-card {
+    padding: 20px 50px;
+    border: 2px #e1e1e1 solid;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.RequestStatus-card svg {
+    font-size: 5em;
+}
+
+.RequestStatus-message p {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 1.2em;
+}
+.RequestStatus-controller {
+    text-align: center;
+    width: 100%;
+}
+.RequestStatus-controller a {
+    display: block;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .RequestStatus-content {
+        width: 35%;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    .RequestStatus-message p {
+        font-size: 1.8em;
+    }
+}

@@ -1,0 +1,122 @@
+@import url('https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import 'Vars.scss';
+
+body{
+    margin: 0;
+}
+html {
+    font-family: $theme-font;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+img{
+    object-fit: cover;
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+section h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+section h2::after{
+    content: '';
+    margin: 5px auto;
+    background-image: url(../static/separator.svg);
+    height: 5px;
+    width: 100px;
+    display: block;
+}
+section p {
+    font-size: 1.5em;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+.section{
+    padding: 60px 0 0 0;
+}
+
+.button {
+    outline: none;
+    color: white;
+    border: none;
+    background-color: $main-color;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    font-family: $font-oswald;
+    font-weight: 800;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background-color: $main-color-light;
+    }
+}
+
+.button-hollow {
+    outline: none;
+    color: white;
+    border: 3px white solid;
+    border-radius: 5px;
+    padding: 10px 45px;
+    text-transform: uppercase;
+    font-family: $font-oswald;
+    font-weight: 800;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background-color: $main-color-light;
+        border: 3px $main-color-light solid;
+    }
+}
+.loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px){
+    
+    section h2 {
+        font-size: 3.5em;
+    }
+    section h2::after{
+        height: 8px;
+    }
+
+    section p {
+        font-size: 2.2em;
+    }
+    .button {
+        font-size: 1.8em;
+    }
+    .button-hollow {
+        border: 4px white solid;
+        padding: 15px 55px;
+        font-size: 2em;
+        &:hover {
+            background-color: $main-color-light;
+            border: 4px $main-color-light solid;
+        }
+    }
+}
+
